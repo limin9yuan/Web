@@ -1,0 +1,227 @@
+#topBar{
+
+    width: 1100px;
+    margin: 0 auto;
+    height: 40px;
+
+}
+
+body{
+
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+
+}
+
+#BBCLogo{
+
+    margin-top: 8px;
+    margin-left: 5px;
+    margin-right: 8px;
+    float: left;
+
+
+}
+
+.topBarSection{
+
+    float: left;
+    border-left: 1px #CCCCCC solid;
+    height: 100%;
+
+}
+
+#signInLogo{
+
+    width: 21px;
+    margin-top: 10px;
+    margin-left: 15px;
+    float: left;
+
+
+
+}
+
+#signInText{
+
+    font-weight: bold;
+    font-size: 80%;
+    position: relative;
+    top: 11px;
+    left: 5px;
+
+}
+
+#signInDiv{
+
+    width: 165px;
+
+}
+
+.topBarText{
+
+    float: left;
+    border-left: 1px #CCCCCC solid;
+    height: 100%;
+    font-weight: bold;
+    font-size: 80%;
+    padding-top: 14px;
+    padding-left: 11px;
+    padding-right: 14px;
+    height: 26px;
+
+}
+
+#moreArrow{
+
+    width: 7px;
+    margin-left: 70px;
+
+
+}
+
+#search{
+
+    background-color: #E4E4E4;
+    border: none;
+    height: 22px;
+    width: 170px;
+    font-weight: bold;
+    margin-top: -5px;
+    padding-left: 5px;
+    float: left;
+
+}
+
+#searchSign{
+
+    height: 24px;
+    margin-top: -5px;
+
+}
+
+.clear{
+
+  clear: both;
+
+}
+
+#menuBarContainer{
+
+  background-color: #BB1919;
+  width: 100%;
+  height: 58px;
+
+}
+
+#menuBar{
+
+  width: 1100px;
+  margin: 0 auto;
+
+}
+
+h1{
+
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-size: 40px;
+  font-weight: normal;
+  padding-top: 8px;
+  padding-left: 5px;
+
+}
+
+#menuBar2Container{
+
+  background-color: #A91717;
+  width: 100%;
+  height: 35px;
+
+}
+
+#menuBar2{
+
+  width: 1100px;
+  margin: 0 auto;
+
+}
+
+#menuBar2 a{
+
+  color: white;
+  text-decoration: none;
+  margin-top: 5px;
+  font-size: 15px;
+  padding: 0 10px;
+  border-right: 1px #BB4545 solid;
+  position: relative;
+  top: 10px;
+
+}
+
+#menuBar2 a:hover{
+
+  text-decoration: underline;
+
+}
+
+.noBorder{
+
+  border: none !important;
+
+}
+#moreArrow2{
+
+  width: 13px;
+
+}
+
+#pageContainer{
+
+  width: 1100px;
+  margin: 0 auto;
+
+}
+
+h2{
+
+  font-weight: normal;
+  font-size: 20px;
+  border-bottom: 3px #BB1919 solid;
+  width: 100px;
+  margin-left: 10px;
+
+}
+
+h3 a{
+
+  color: black;
+  font-weight: bold;
+  font-size: 35px;
+  text-decoration: none;
+  margin-left: 10px;
+
+}
+
+h3 a:hover{
+
+  color: #1167A8;
+
+}
+
+#articleSummary{
+
+  color: #5A5A5A;
+  margin-left: 10px;
+  width: 300px;
+
+}
+#articleSummary a{
+
+  text-decoration: none;
+  color: #5A5A5A;
+
+}

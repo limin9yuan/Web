@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Manipulating Styles With Javascript</title>
+    </head>
+    <body>
+        <p id="text">Hello World</p>
+        <button id="button">Change Text</button>
+        <p id="secondText">Javascript is ...</p>
+        <button id="secondButton">Change Text</button>
+        <p id="blank"></p>
+        <button id="thirdButton">Appear</button>
+        <p id="moreText">This is some text</p>
+        <button id="styleText">Style Text</button>
+        <script type="text/javascript">
+            document.getElementById("button").onclick = function() {
+                document.getElementById("text").innerHTML = "Mingyuan"
+
+            }
+            document.getElementById("secondButton").onclick = function(){
+                document.getElementById("secondText").innerHTML = "I think " + document.getElementById("secondText").innerHTML + "awesome"
+            }
+            document.getElementById("thirdButton").onclick = function() {
+                document.getElementById("blank").innerHTML = "That's good!"
+            }
+            document.getElementById("styleText").onclick = function(){
+                document.getElementById("moreText").style.color = "red"
+                document.getElementById("moreText").style.display = "none"
+            }
+        </script>
+    </body>
+</html>

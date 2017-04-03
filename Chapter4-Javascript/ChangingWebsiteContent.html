@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Changing Website Content</title>
+    </head>
+    <body>
+        <p id="text">Hello World</p>
+        <button id="button">Change Text</button>
+        <p id="secondText">Javascript is ...</p>
+        <button id="secondButton">Change Text</button>
+        <p id="blank"></p>
+        <button id="thirdButton">Appear</button>
+        <script type="text/javascript">
+            document.getElementById("button").onclick = function() {
+                document.getElementById("text").innerHTML = "Mingyuan"
+
+            }
+            document.getElementById("secondButton").onclick = function(){
+                document.getElementById("secondText").innerHTML = "I think " + document.getElementById("secondText").innerHTML + "awesome"
+            }
+            document.getElementById("thirdButton").onclick = function() {
+                document.getElementById("blank").innerHTML = "That's good!"
+            }
+
+        </script>
+    </body>
+</html>
