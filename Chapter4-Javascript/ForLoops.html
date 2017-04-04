@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>For loops</title>
+    </head>
+    <body>
+        <div id="tweets"></div>
+        <script type="text/javascript">
+            var tweetsString = "";
+            var tweets = ["Hi", "My name is", "Mingyuan", "That's all"];
+            for (var i = 0; i < tweets.length; i++) {
+                tweetsString = tweetsString + "<p>" + tweets[i] + "<p>";
+            }
+            document.getElementById("tweets").innerHTML = tweetsString;
+        </script>
+    </body>
+</html>

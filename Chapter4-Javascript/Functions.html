@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>While Loops</title>
+    </head>
+    <body>
+        <p>How many fingers are you holding up</p>
+        <p>
+            <input id="input" type="text">
+            <button id="button" type="button">Guess</button>
+        </p>
+        <p>How many fingers are you holding up</p>
+        <p>
+            <select id="select">
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+            <button id="button2"type="button">Guess</button>
+        </p>
+        <script type="text/javascript">
+            function DoAguess(answer) {
+                var guess = Math.floor(Math.random() * 6);
+                if (guess == answer) {
+                    return true;
+
+                }
+                else {
+                    return false;
+                }
+            }
+            document.getElementById("button").onclick = function () {
+                var number = document.getElementById("input").value;
+                var i = 1;
+                if (number != "") {
+                    if (0 <= number && number < 6 ) {
+                        while (true) {
+                            if (DoAguess(number)) {
+                                alert("Guess " + i + " times, your number is " + number );
+                                break;
+
+                            }
+                            i++;
+                        }
+                    }
+                    else  {
+                        alert("Enter number between 1 to 5 included");
+                    }
+                }
+                else {
+                    alert("Please enter a number");
+                }
+            }
+            document.getElementById("button2").onclick = function () {
+                var number = document.getElementById("select").value;
+                var i = 1;
+                while (true) {
+                    if (DoAguess(number)) {
+                        alert("Guess " + i + " times, your number is " + number );
+                        break;
+                    }
+                    i++;
+
+                }
+
+            }
+        </script>
+    </body>
+</html>
