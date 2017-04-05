@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Changing Website Content</title>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <style type="text/css">
+      #circle{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: green;
+        margin: 10px;
+
+      }
+
+      .square{
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        margin: 10px;
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="circle"></div>
+    <div id="square1" class="square"></div>
+    <div id="square2" class="square"></div>
+    <p>This is some text</p>
+    <iframe src="http://www.baidu.com"></iframe>
+    <script type="text/javascript">
+      $("#circle").hover(function() {
+        $("p").html("Text is changed")
+      })
+      $("#circle").click(function() {
+        $("p").html("Text is changed again")
+      })
+      $("#square1").click(function() {
+        $("iframe").attr("src", "http://www.youku.com")
+      })
+
+    </script>
+  </body>
+</html>
