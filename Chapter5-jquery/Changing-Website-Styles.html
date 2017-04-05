@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Changing Website Style</title>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <style type="text/css">
+      #circle{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: green;
+        margin: 10px;
+
+      }
+
+      .square{
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        margin: 10px;
+        float: left;
+      }
+      #square1{
+          background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="circle"></div>
+    <div id="square1" class="square"></div>
+    <div id="square2" class="square"></div>
+    <p>This is some text</p>
+    <script type="text/javascript">
+        $("#circle").click(function() {
+
+            $("#circle").css("width", "400px");
+            $("#circle").css("background-color", "red");
+            alert($("#circle").css("background-color"));
+        });
+        $("div").click(function() {
+            $(this).css("display", "none");
+            if ($(this).attr("class") == "square") {
+                alert("You click on a " + $(this).attr("class"));
+
+            }
+
+
+        })
+
+
+
+    </script>
+  </body>
+</html>

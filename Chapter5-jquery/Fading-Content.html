@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fading Content</title>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <style type="text/css">
+      #circle{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: green;
+        margin: 10px;
+        float: left;
+
+      }
+
+      .square{
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        margin: 10px;
+        float: left;
+      }
+      #square1{
+          background-color: black;
+      }
+      #textDiv{
+          float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="circle"></div>
+    <div id="square1" class="square"></div>
+    <div id="square2" class="square"></div>
+    <p id="text">This is fadeOut test</p>
+    <button id="fadeOut" type="button">fadeOut</button>
+    <button id="fadeIn" type="button">fadeIn</button>
+    <button id="InOrOut" type="button">In or Out</button>
+
+    <script type="text/javascript">
+        $("div").click(function() {
+            $(this).fadeOut("slow", function() {
+
+            });
+        })
+        var textShowing = true;
+        $("#fadeOut").click(function () {
+            if (textShowing) {
+                $("p").fadeOut();
+                textShowing = false;
+            }
+
+        });
+        $("#fadeIn").click(function () {
+            if (!textShowing) {
+                $("p").fadeIn();
+                textShowing = true;
+            }
+        })
+        $("#InOrOut").click(function () {
+            if ($("#text").css("display") == "none") {
+                $("#text").fadeIn();
+            }
+            else {
+                $("#text").fadeOut();
+            }
+
+        })
+
+
+
+    </script>
+  </body>
+</html>
