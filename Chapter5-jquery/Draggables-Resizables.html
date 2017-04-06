@@ -5,7 +5,7 @@
     <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript" src="jquery-ui/jquery-ui.js"></script>
     <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
-    <style media="screen">
+    <style type="text/css">
       .draggable {
         width: 90px;
         height: 90px;
@@ -89,7 +89,12 @@
 
       })
       $(function () {
-        $("#resize").resizable();
+        $("#resize").resizable({
+          resize: function( event, ui ) {
+            if ($("#resize").width() > 300) {
+              alert("Too Big");
+            }
+        }});
       })
       $(function () {
         $("#resize1").resizable({

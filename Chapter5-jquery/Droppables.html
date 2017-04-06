@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Droppables</title>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery-ui/jquery-ui.js"></script>
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+    <style type="text/css">
+      .square{
+        margin: 5px;
+        align: center;
+      }
+      #littleSquare{
+        width: 100px;
+        height: 100px;
+        background-color: red;
+
+      }
+      #bigSquare{
+        width: 200px;
+        height: 200px;
+        background-color: green;
+
+      }
+    </style>
+  </head>
+  <body>
+    <div id="littleSquare" class="square"></div>
+    <div id="bigSquare" class="square"></div>
+    <script type="text/javascript">
+      $(function () {
+        $("#littleSquare").draggable();
+        $("#bigSquare").droppable({drop: function (event, ui) {
+          alert("Dropped");
+        }});
+      });
+    </script>
+  </body>
+</html>
