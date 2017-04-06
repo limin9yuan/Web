@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Draggables and Resizables</title>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery-ui/jquery-ui.js"></script>
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+    <style media="screen">
+      .draggable {
+        width: 90px;
+        height: 90px;
+        padding: 0.5em;
+        border: 1px black solid;
+        margin: 5px;
+      }
+      #box{
+        width: 95%;
+        height: 150px;
+        border: 1px solid grey;
+        padding: 10px;
+        background-color: red;
+      }
+      #resize{
+        width: 90px;
+        height: 90px;
+        padding: 0.5em;
+        border: 1px black solid;
+        margin: 5px;
+      }
+      h3{
+        text-align: center;
+        margin: 0 auto;
+      }
+      .synch{
+        width: 90px;
+        height: 90px;
+        padding: 0.5em;
+        border: 1px black solid;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="draggable1" class="draggable">
+      <p>I can be dragged only vertically</p>
+    </div>
+    <div id="draggable2" class="draggable">
+      <p>I can be dragged only horizontally</p>
+    </div>
+    <div id="box">
+      <div id="draggable3" class="draggable">
+        <p>I'm contained within the box</p>
+      </div>
+    </div>
+    <div id="parent"  class="draggable">
+      <p id="draggable4">I'm contained within my parent</p>
+    </div>
+
+    <div id="draggable5" class="draggable">
+      <p>Drag me around</p>
+    </div>
+    <div id="resize">
+      <h3>resize</h3>
+    </div>
+    <div id="resize1" class="synch">
+      <h3>synch resize</h3>
+    </div>
+    <div id="also" class="synch">
+      <h3>synch resize</h3>
+    </div>
+    <script type="text/javascript">
+      $( function() {
+        $("#draggable1").draggable({axis: "y"});
+      });
+      $(function () {
+        $("#draggable2").draggable({axis: "x"});
+
+      })
+      $(function () {
+        $("#draggable3").draggable({containment:"#box"});
+
+      })
+      $(function () {
+        $("#draggable4").draggable({containment: "parent"});
+
+      })
+      $(function () {
+        $("#draggable5").draggable();
+
+      })
+      $(function () {
+        $("#resize").resizable();
+      })
+      $(function () {
+        $("#resize1").resizable({
+          alsoResize: "#also",
+          resize: function( event, ui ) {
+            if ($("#resize1").width() > 300) {
+              alert("Too Big");
+            }
+        }});
+
+      })
+      $(function () {
+        $("#also").resizable();
+
+      })
+
+    </script>
+  </body>
+</html>
