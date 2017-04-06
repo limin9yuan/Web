@@ -1,0 +1,39 @@
+body{
+    font-family: helvetica, sans-serif;
+    font-size: 130%;
+}
+input{
+    padding: 5px 5px 12px 5px;
+    font-size: 25px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    width: 320px;
+
+}
+label{
+    position: relative;
+    top: 12px;
+    width: 200px;
+    float: left;
+}
+#wrapper{
+    width: 600px;
+    margin: 0 auto;
+}
+.form{
+    margin-bottom: 10px;
+}
+#submitButton{
+    width: 130px;
+    margin-left: 200px;
+}
+#errorMessage{
+    color: red;
+    font-size: 80% !important;
+}
+#sucessMessage{
+    color: green;
+    font-size: 80% !important;
+    display: none;
+    margin: 20px;
+}
