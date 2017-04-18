@@ -16,33 +16,56 @@
         border: 1px solid #BFBFBF;
       }
       #buttonContainer{
-        width: 300px;
-        height: 30px;
-        background-color: #EEEEEE;
-        border: 1px solid #BFBFBF;
-        border-radius: 5px;
+        width: 239px;
         margin: 0 auto;
-        margin-top: 1px;
-
-
       }
       #logo{
         float: left;
+        font-weight: bold;
+        font-size: 120%;
+        padding: 3px 5px;
       }
       .buttons{
         font-size: 12px;
         float: left;
+        border: 1px solid #BFBFBF;
+        padding: 8px;
+        border-right: none;
+        margin-top: 1px;
+    }
+    #output{
         border-right: 1px solid #BFBFBF;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
 
-        padding: 10px;
-      }
-      #output{
-        border: none !important;
-      }
+    }
+    #html{
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+    .active{
+        background-color: #E8F2FF;
+    }
+    .highLightedButton{
+        background-color: #E5E5E5;
+    }
+    #htmlTextArea{
+        resize: none;
+        border-top: none;
+        border-bottom: none;
+    }
+    .panel{
+        float: left;
+    }
+    iframe{
+        border: none;
+    }
+    .hidden{
+        display: none;
+
+    }
     </style>
-    <script type="text/javascript">
 
-    </script>
   </head>
   <body>
     <div id="header">
@@ -50,14 +73,45 @@
         CodePlayer
       </div>
       <div id="buttonContainer">
-        <div id="html" class="buttons">HTML</div>
-        <div id="CSS" class="buttons">CSS</div>
+        <div id="html" class="buttons active">HTML</div>
+        <div id="css" class="buttons">CSS</div>
         <div id="javascript" class="buttons">JavaScript</div>
-        <div id="output" class="buttons">Output</div>
+        <div id="output" class="buttons active">Output</div>
 
 
       </div>
     </div>
+    <div id="bodyContainer">
+        <textarea id="htmlTextArea" class="panel">hello</textarea>
+        <textarea id="cssTextArea" class="panel hidden">hello</textarea>
+        <textarea id="javascriptTextArea" class="panel hidden">hello</textarea>
+        <iframe id="outputTextArea" class="panel"></iframe>
+
+    </div>
+    <script type="text/javascript">
+        $(".buttons").hover(function () {
+            $(this).addClass("highLightedButton");
+        },
+        function () {
+            $(this).removeClass("highLightedButton");
+
+        })
+        $(".buttons").click(function () {
+            $(this).toggleClass("active");
+            $(this).removeClass("highLightedButton");
+            var clickID = $(this).attr("id") + "TextArea";
+            $("#" + clickID).toggle();
+
+        })
+        $(".panel").height($(window).height() - $("#header").height());
+        $(".panel").width($(window).width() / 2 - 5);
+        $("iframe").contents().find("html").html($("#htmlTextArea").val());
+        $("textarea").on("change keyup paste", function() {
+            $("iframe").contents().find("html").html($("#htmlTextArea").val());
+        })
+
+
+    </script>
 
 
   </body>
