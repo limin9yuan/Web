@@ -1,0 +1,64 @@
+body{
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+#header{
+  width: 100%;
+  height: 35px;
+  background-color: #EEEEEE;
+  border: 1px solid #BFBFBF;
+}
+#buttonContainer{
+  width: 239px;
+  margin: 0 auto;
+}
+#logo{
+  float: left;
+  font-weight: bold;
+  font-size: 120%;
+  padding: 3px 5px;
+}
+.buttons{
+  font-size: 12px;
+  float: left;
+  border: 1px solid #BFBFBF;
+  padding: 8px;
+  border-right: none;
+  margin-top: 1px;
+}
+#output{
+  border-right: 1px solid #BFBFBF;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+}
+#html{
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.active{
+  background-color: #E8F2FF;
+}
+.highLightedButton{
+  background-color: #E5E5E5;
+}
+#htmlTextArea{
+  resize: none;
+  border-top: none;
+  border-bottom: none;
+}
+.panel{
+  float: left;
+  border-left: none;
+  border-top: none;
+  resize: none;
+  border-bottom: none;
+}
+iframe{
+  border: none;
+}
+.hidden{
+  display: none;
+
+}
