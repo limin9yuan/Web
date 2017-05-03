@@ -1,4 +1,5 @@
 <?php
+    session_start();
     $link = mysqli_connect("localhost", "root", "qwe123!@#", "chapter9");
     if (mysqli_connect_error()){
         die ("error connecting database");
@@ -23,7 +24,8 @@
                       VALUES ('".mysqli_real_escape_string($link, $_POST["email"])."',
                               '".mysqli_real_escape_string($link, $_POST["password"])."')";
             if (mysqli_query($link, $query)){
-                echo "Success<br>";
+                $_SESSION["email"] = $_POST["email"];
+                header("Location: Session-Variables.php");
             }
             else {
                 echo "Fail. Try again<br>";
